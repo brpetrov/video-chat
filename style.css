@@ -4,31 +4,83 @@
 }
 
 body {
-  background: url("img.jpg") center top no-repeat;
+  background: url('img.jpg') center top no-repeat;
   background-size: cover;
 }
 
+.container {
+  margin-top: 12rem;
+  text-align: center;
+}
+
 .words {
-  position: absolute;
-  max-width: 350px;
-  top: 40%;
-  left: 41%;
-  margin: 2rem auto;
+  margin: 1rem auto;
+  max-width: 15rem;
   padding: 1rem;
   text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgba(195, 195, 195, 0.3);
+  border-radius: 5px;
+  font-size: 0.9rem;
 }
 
 .speak {
-  position: absolute;
-  top: 35%;
-  left: 47%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 500;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
+  padding: 0.8rem 1.7rem;
+  font-size: 1.3rem;
   background-color: #fb4e59;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
+}
+
+.speak:hover {
+  filter: brightness(90%);
+}
+
+.blink_me {
+  animation: blinker 3s linear 9;
+  opacity: 0;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 100;
+  }
+}
+@media only screen and (max-width: 800px) {
+  body {
+    background: none;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .container {
+    margin-top: 12rem;
+  }
+
+  .speak {
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .container {
+    margin-top: 15rem;
+  }
+
+  .speak {
+    padding: 0.7rem 1.3rem;
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .container {
+    margin-top: 20rem;
+  }
 }
